@@ -1,0 +1,45 @@
+.header {
+  background-color: #0f39a1;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.icon-tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-body {
+  border: 2px solid;
+  width: 350px;
+  height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab {
+  border-bottom: 1px solid grey;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tab button {
+  background-color: white;
+  color: grey;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: white;
+  color: #3e68d3;
+}

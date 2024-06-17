@@ -1,0 +1,55 @@
+.container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.header {
+  background-color: #0f39a1;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  font-size: 18px;
+}
+
+input[type="text"] {
+  width: 70%;
+}
+
+.back-icon {
+  position: absolute;
+  left: 30px;
+  font-size: 18px;
+}
+
+.min-max {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+}
+
+.travel-class {
+  padding: 10px;
+  border: 1px solid rgb(216, 213, 213);
+  border-bottom: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.reset-btn {
+  height: 40px;
+  border: 1px solid grey;
+  background-color: white;
+  width: 75px;
+}
+
+.apply-btn {
+  height: 40px;
+  border: 1px solid grey;
+  background-color: #0f39a1;
+  width: 75px;
+}

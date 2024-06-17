@@ -1,0 +1,39 @@
+.container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.header {
+  background-color: #0f39a1;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  font-size: 18px;
+}
+
+.back-icon {
+  position: absolute;
+  left: 30px;
+  font-size: 18px;
+}
+
+.sort-form {
+  padding: 5px;
+  margin-left: 8px;
+  margin-top: 30px;
+}
+
+.done {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color: white;
+  height: 45px;
+  border: none;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}

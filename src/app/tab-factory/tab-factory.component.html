@@ -1,0 +1,25 @@
+<div class="header">
+  <h1>{{ appName }}</h1>
+</div>
+<div class="tab">
+  <div class="icon-tab">
+    <i class="fas fa fa-plane"></i>
+    <button class="tab-button" (click)="openTab('Flights')">Flights</button>
+  </div>
+
+  <div class="icon-tab">
+    <i class="fas fa fa-building"></i>
+    <button class="tab-button" (click)="openTab('Hotels')">Hotels</button>
+  </div>
+
+  <div class="icon-tab">
+    <i class="fas fa fa-automobile"></i>
+    <button class="tab-button" (click)="openTab('Cars')">Cars</button>
+  </div>
+
+  <div class="icon-tab">
+    <i class="fa fa-flag"></i>
+    <button class="tab-button" (click)="openTab('Activity')">Activity</button>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="header">
+        <i class='fas fa-arrow-left back-icon' (click)="back()"></i>
+        <span>Filter By</span>
+    </div>
+    <form class="travel-class" #filterForm="ngForm">
+    <div>Price range</div>
+    <div class="min-max">
+        <div>
+            <label for="minimum">Minimum</label>
+            <input type="text" value=0 name="minimum" [(ngModel)]="minPrice">
+        </div>
+        <div>
+            <label for="maximum">Maximum</label>
+            <input type="text" value=0 name="maximum" [(ngModel)]="maxPrice">
+        </div>
+    </div>
+
+    <div>Booking-class</div>
+        <input type="radio" id="economy" name="booking" value="economy" [(ngModel)]="booking">
+        <label for="economy">Economy</label><br><br>
+
+        <input type="radio" id="basic" name="booking" value="basic" [(ngModel)]="booking">
+        <label for="basic">Basic</label><br><br>
+ 
+        <input type="radio" id="main" name="booking" value="main" [(ngModel)]="booking">
+        <label for="main">Main</label><br><br>
+
+        <div class="btn">
+            <button class="reset-btn" (click)="resetAll()">Reset all</button>
+            <button type="submit" class="apply-btn" (click)="apply(filterForm)">Apply</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,49 @@
+<app-tab-factory></app-tab-factory>
+<div class="container">
+    <form #flightsForm="ngForm" (ngSubmit)="onSubmit(flightsForm)">
+        <label for="departure">Departure</label>
+        <select name="departure" ngModel>
+            <option selected="" value="">Select Departure</option>
+            <option [ngValue]="airport.id" *ngFor="let airport of departureData">{{airport.id}} - {{airport.name}}</option>
+        </select>
+
+        <label for="destination">Destination</label>
+        <select name="destination" ngModel>
+            <option selected="" value="">Select Destination</option>
+            <option [ngValue]="airport.id" *ngFor="let airport of destinationData">{{airport.id}} - {{airport.name}}</option>
+        </select>
+
+        <div class="first-row">
+            <div>
+                <label for="depart_date">Depart date</label>
+                <input type="date" id="depart_date" name="depart_date" value="2023-07-17" ngModel>
+            </div>
+
+            <div>
+                <label for="return_date">Return date</label>
+                <input type="date" id="return_date" name="return_date" ngModel>
+            </div>
+        </div>
+
+        <div class="second-row">
+            <div>
+                <label for="travelers">Travelers</label>
+                <input type="text" name="travelers" value="travelers" ngModel>
+            </div>
+
+            <div>
+                <label for="class">Class</label>
+                <select id="class" name="travel-class" ngModel>
+                    <option value="economy">Economy</option>
+                    <option value="basic">Basic</option>
+                    <option value="main">Main</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="submit">Search flights</button>
+    </form>
+    <div class="error-div">
+        <p *ngFor='let error of validationErrors' class="error">{{error}}</p>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="header">
+        <i class='fas fa-arrow-left back-icon' (click)="back()"></i>
+        <span>Sort By</span>
+    </div>
+    <form class="sort-form" #sortForm="ngForm" (ngSubmit)="onSubmit(sortForm)">
+        <input type="radio" name="sorting" id="lowest-to-highest" value="lowest-to-highest" ngModel>
+        <label for="lowest-to-highest">Price(Lowest to Highest)</label><br><br>
+
+        <input type="radio" name="sorting" id="highest-to-lowest" value="highest-to-lowest" ngModel>
+        <label for="highest-to-lowest">Price(Highest to Lowest)</label><br><br>
+
+        <input type="radio" name="sorting" id="shortest-to-longest" value="shortest-to-longest" ngModel>
+        <label for="shortest-to-longest">Duration(Shortest to Longest)</label><br><br>
+
+        <input type="radio" name="sorting" id="longest-to-shortest" value="longest-to-shortest" ngModel>
+        <label for="longest-to-shortest">Duration(Longest to Shortest)</label><br><br>
+
+        <input type="radio" name="sorting" id="d-earlier-to-latest" value="d-earlier-to-latest" ngModel>
+        <label for="d-earlier-to-latest">Departure(Earlier to Latest)</label><br><br>
+
+        <input type="radio" name="sorting" id="a-earlier-to-latest" value="a-earlier-to-latest" ngModel>
+        <label for="a-earlier-to-latest">Arrival(Earlier to Latest)</label><br><br>
+
+        <!-- <input type="radio" name="sorting" id="airline-az" value="airline-az" ngModel>
+        <label for="airline-az">Airline (A to Z)</label><br><br>
+
+        <input type="radio" name="sorting" id="airline-za" value="airline-za" ngModel>
+        <label for="airline-za">Airline (Z to A)</label><br><br> -->
+
+        <button type="submit" class="done">DONE</button>
+    </form>
+    
+</div>

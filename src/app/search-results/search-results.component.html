@@ -1,0 +1,48 @@
+<div class="search-result">
+<div class="header">
+    <i class='fas fa-arrow-left back-icon' (click)="back()"></i>
+    <span>{{formData.departure}} - {{formData.destination}}</span>
+</div>
+<span *ngIf="showAll" class="showAll">No results found in the filter, showing all results</span>
+<div class="content" *ngFor="let route of flightRoutes">
+    <div class="airlines">{{route.airlines}}</div>
+    <div class="route-details">
+        <div>
+        <div class="time">{{route.start.getHours()}}:{{route.start.getMinutes()}}</div>
+        <div class="time">{{route.source}}</div>
+        </div>
+        <div class="duration">
+            <div>{{route.duration.hour}}:{{route.duration.minute}}</div>
+            <div>-----------------------------------------</div>
+            <div>0 stops</div>
+        </div>
+        <div>
+            <div class="time">{{route.end.getHours()}}:{{route.end.getMinutes()}}</div>
+            <div class="time">{{route.destination}}</div>
+        </div>
+    </div>
+    <div class="fares">
+        <!-- <span class="seats">{{route.seats?.economy}} seats</span> -->
+        <div class="rate">
+            <div>{{route.fares.economy}}/-</div>
+            <div class="type">Economy</div>
+        </div>
+        
+        <!-- <span class="seats">{{route.seats?.basic}} seats</span> -->
+        <div class="rate">
+            <div>{{route.fares.basic}}/-</div>
+            <div class="type">Basic</div>
+        </div>
+        
+        <!-- <span class="seats">{{route.seats?.main}} seats</span> -->
+        <div class="rate">
+            <div>{{route.fares.main}}/-</div>
+            <div class="type">Main</div>
+        </div>
+    </div>
+</div>
+<div class="filters">
+    <button class="btn sort-btn" (click)="openSort()">Sort By</button>
+    <button class="btn" (click)="openFilters()">Filters</button>
+</div>
+</div>
