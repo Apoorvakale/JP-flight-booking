@@ -7,8 +7,8 @@ import {
   ViewChild,
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, take } from 'rxjs';
-import { FlightsService } from 'src/app/flights/flights.service';
+import { take } from 'rxjs';
+import { FlightsService } from 'src/app/flights.service';
 
 @Component({
   selector: 'app-filter',
@@ -35,18 +35,9 @@ export class FilterComponent implements OnInit {
   }
 
   ngOnInit() {
-    // localStorage.setItem(
-    //   'filterValues',
-    //   JSON.stringify({
-    //     minPrice: 0,
-    //     maxPrice: 0,
-    //     booking: 'economy',
-    //   })
-    // );
     this.service.userSelection
       .pipe(take(1))
       .subscribe((res) => (this.formData = res));
-    // this.service.dataToDisplay.subscribe((res) => (this.searchResults = res));
     this.searchResults = this.service.getFlightRoutes(
       this.formData.departure,
       this.formData.destination

@@ -1,7 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { FlightsService } from 'src/app/flights/flights.service';
+import { FlightsService } from 'src/app/flights.service';
 
 @Component({
   selector: 'app-sort',

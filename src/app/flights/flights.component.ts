@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FlightsService } from './flights.service';
+import { FlightsService } from '../flights.service';
 
 @Component({
   selector: 'app-flights',
@@ -13,16 +13,12 @@ export class FlightsComponent implements OnInit {
     { id: 'PNQ', name: 'Lohegaon Airport Pune, India' },
     { id: 'AND', name: 'Andaman Airport' },
     { id: 'BLR', name: 'Bangalore airport' },
-    // { id: 'GOA', name: 'Goa Airport' },
-    // { id: 'HYD', name: 'Hyderabad Airport' },
   ];
 
   public destinationData: any = [
     { id: 'PNQ', name: 'Lohegaon Airport Pune, India' },
     { id: 'AND', name: 'Andaman Airport' },
     { id: 'BLR', name: 'Bangalore airport' },
-    // { id: 'GOA', name: 'Goa Airport' },
-    // { id: 'HYD', name: 'Hyderabad Airport' },
   ];
 
   public validationErrors: any = [];

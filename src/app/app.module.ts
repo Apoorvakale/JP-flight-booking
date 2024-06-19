@@ -11,7 +11,6 @@ import { ActivityComponent } from './activity/activity.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { SortComponent } from './search-results/sort/sort.component';
 import { FilterComponent } from './search-results/filter/filter.component';
-import { FlightsService } from './flights/flights.service';
 import { RouterModule } from '@angular/router';
 
 @NgModule({

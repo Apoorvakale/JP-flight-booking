@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { FlightsService } from '../flights/flights.service';
 import { take } from 'rxjs';
+import { FlightsService } from '../flights.service';
 
 @Component({
   selector: 'app-search-results',
